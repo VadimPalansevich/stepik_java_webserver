@@ -17,12 +17,17 @@ public class Main {
         AllRequestsServlet allRequestsServlet = new AllRequestsServlet();
 
         ServletContextHandler context = new ServletContextHandler(ServletContextHandler.SESSIONS);
-        context.addServlet(new ServletHolder(allRequestsServlet), "/*");
 
+// любой запрос по /* на сервлет allRequestServlet
+        context.addServlet(new ServletHolder(allRequestsServlet), "/*");
+// jetty сервер по порту
         Server server = new Server(8080);
+//передаем handler
         server.setHandler(context);
 
         server.start();
+//логгер по заданию курса
+        java.util.logging.Logger.getGlobal().info("Server started");
         server.join();
     }
 }

@@ -5,8 +5,9 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>L1.1</groupId>
-    <artifactId>L1.1</artifactId>
+    <artifactId>server</artifactId>
     <version>1.0</version>
+
 
 	<properties>
         <maven.compiler.source>1.8</maven.compiler.source>
