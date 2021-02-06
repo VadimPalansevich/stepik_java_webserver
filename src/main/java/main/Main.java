@@ -17,7 +17,6 @@ public class Main {
         AllRequestsServlet allRequestsServlet = new AllRequestsServlet();
 
         ServletContextHandler context = new ServletContextHandler(ServletContextHandler.SESSIONS);
-
 // любой запрос по /* на сервлет allRequestServlet
         context.addServlet(new ServletHolder(allRequestsServlet), "/*");
 // jetty сервер по порту
